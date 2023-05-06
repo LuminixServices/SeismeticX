@@ -6,9 +6,6 @@ import { readFileSync, existsSync } from "node:fs";
 import { hostname } from "node:os";
 import serveStatic from "serve-static";
 
-// The following message MAY NOT be removed
-console.log("Incognito\nThis program comes with ABSOLUTELY NO WARRANTY.\nThis is free software, and you are welcome to redistribute it\nunder the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nYou should have received a copy of the GNU General Public License\nalong with this program. If not, see <https://www.gnu.org/licenses/>.\n");
-
 const bare = createBareServer("/bare/");
 const serve = serveStatic(fileURLToPath(new URL("../static/", import.meta.url)), { fallthrough: false });
 var server, PORT = process.env.PORT;

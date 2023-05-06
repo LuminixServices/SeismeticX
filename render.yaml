@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: incognito
+    name: seismeticx
     env: node
     buildCommand: npm install
     startCommand: npm start

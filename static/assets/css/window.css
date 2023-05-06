@@ -1,0 +1,45 @@
+.CTNAIR {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: 1px solid #ccc;
+  }
+  
+  .stopbar {
+    background-color: #080808;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: move;
+    user-select: none;
+  }
+  
+  .logo {
+    user-select: none;
+    height: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  iframe {
+    width: 100%;
+    height: calc(100% - 40px);
+    border: none;
+  }
+  

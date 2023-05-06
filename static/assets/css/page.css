@@ -1,0 +1,282 @@
+html, body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(100%);
+    margin: 0;
+    padding: 0;
+background: linear-gradient(153deg, #1f0f0f 1%, #000000 23%, #522121 82%, #000000 100%);
+}
+
+body { 
+    padding-top: 80px;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+}
+
+.c2enter {
+  padding-top: 128px;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+}
+
+#biglogo {
+  opacity: 0;
+  animation: balls 1s ease-in-out forwards;
+  width: 512px;
+  height: 64px;
+}
+
+#random {
+  opacity: 0; /* set initial opacity to 0 */
+  animation: balls 1s ease-in-out forwards; /* add animation with 1s duration */
+}
+
+#btnspace {
+  font: bolder;
+  font-size: large;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 25px;
+  background-color: #61180d;
+  color: white;
+  height: 64px;
+  width: 256px;
+  margin-top: 64px;
+  margin-left: 50px;
+}
+
+#btnspace:hover {
+  animation: fadeIn 0.5s ease-in-out;
+  background-color: rgb(223, 223, 223);
+  color: #000000;
+}
+
+/* Style the scrollbar in Chrome */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #000000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #FF0000;
+    border-radius: 10px;
+  }
+  
+  /* Style the scrollbar in Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #FF0000 #000000;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background-color: #000000;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #FF0000;
+    border-radius: 10px;
+  }
+  
+.navbar {
+  opacity: 0;
+  animation: balls 1s ease-in-out forwards;
+    color: white;
+font-weight: 32px;
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    background-color: rgba(104, 23, 23, 0.178);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.navbar-logo {
+    margin-left: 20px;
+}
+.navbar-logo img {
+    width: 150Spx;
+    height: 20px;
+}
+.navbar-buttons {
+font-weight: 32px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin: 0;
+padding: 0;
+flex: 1;
+}
+.navbar button {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+background-color: transparent;
+color: white;
+border: none;
+cursor: pointer;
+font-size: 22px;
+font-weight: normal;
+margin: 0 24px;
+}
+
+.TICKLEMYNUTSACK {
+  font-weight: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  }
+
+.navbar button:hover {
+    color: red;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes balls {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modeselection-box {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 2px solid rgb(190, 71, 71);
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+.modeselection-box img {
+  margin: auto;
+  align-self: center;
+  height: 89px;
+  display: block;
+  width: 100%
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.modeselection-box h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modeselection-box:hover {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modeselection-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.modeselection-box .launch-btn {
+  border-radius: 10px;
+  display: block;
+  background-color: rgb(189, 23, 23);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.modeselection-box .launch-btn:hover {
+  border-radius: 200px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  transform: translateX(-50%) scale(1.1);
+}
+
+#uv-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#uv-address {
+  text-align: center;
+  color: white;
+  width: 800px;
+  height: 40px;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+#uv-address::placeholder {
+  color: #7e7676;
+}
+
+#uv-address:focus {
+  border-radius: 50px;
+  border: 3px solid rgb(92, 60, 60);
+}
+
+button[type="submit"] {
+  background-color: #963d3a;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

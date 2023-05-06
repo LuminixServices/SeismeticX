@@ -5,7 +5,6 @@ import { createServer as createHttpServer } from "node:http";
 import { readFileSync, existsSync } from "node:fs";
 import { hostname } from "node:os";
 import serveStatic from "serve-static";
-
 const bare = createBareServer("/bare/");
 const serve = serveStatic(fileURLToPath(new URL("../static/", import.meta.url)), { fallthrough: false });
 var server, PORT = process.env.PORT;

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="window.js"></script>
+	<script src="./assets/JS/find.js"></script>
+	<script src="./assets/JS/customgame.js"></script>
+	<script src="uv/uv.bundle.js" defer></script>
+	<script src="uv/uv.config.js" defer></script>
+	<script src="index.js" defer></script>
+    <link rel="stylesheet" href="assets/css/page.css">
+    <link rel="stylesheet" href="assets/css/window.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<title>Seismetic X</title>
+</head>
+<body onload="refreshGameContainer();">
+	<div class="navbar">
+		<div class="navbar-logo">
+			<img src="./SeisV3.png" alt="Logo">
+		</div>
+		<div class="navbar-buttons">
+			<button onclick="window.location.href ='./apps.html' "><i class="fas fa-th"></i> Apps</button>
+			<button onclick="window.location.href ='./games.html' "><i class="fas fa-gamepad"></i> Games</button>
+			<button onclick="window.location.href ='./search.html' "><i class="fas fa-search"></i> Search</button>
+			<button onclick="window.location.href ='./chat.html' "><i class="fas fa-comments"></i> Chat</button>
+			<button onclick="window.location.href ='./settings.html' "><i class="fas fa-cog"></i> Settings</button>
+		</div>
+	</div>
+	<div class="c3enter">
+		<input class="searchbar" id="searchbar" name="search" onkeyup="search_item()" placeholder="Search.." tag="searchbar" type="text" autocomplete="off">
+		<button id="smallbtnspace" onclick="clearGames()">Clear Custom Games</button>
+		<div class="gamebox-container" id="game-container">
+			<!---->
+			<div class="gamebox" id="add-game">
+				<div class="gamebox__image">
+				<img src="./assets/img/apps/plus.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				<div class="gamebox__title">Add Game</div>
+				<button class="gamebox__button" onclick="addGame()">Play</button>
+				</div>
+			</div>
+			<!---->
+			<!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/1v1-lol.webp" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">1v1.lol</div>
+				  <button class="gamebox__button" onclick="openWindow('https://1v1.lol')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/zombs.jpeg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Zombs Royale</div>
+				  <button class="gamebox__button" onclick="openWindow('https://zombsroyale.io')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/slope.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Slope</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/slope')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/tinyfishing.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Tiny Fishing</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/tiny-fishing')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/run3.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Run 3</div>
+				  <button class="gamebox__button" onclick="openWindow('https://www.coolmathgames.com/0-run-3/play')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			   <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./g_file/temple-run-2/img/og-icon.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Temple Run</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/temple-run-2')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./g_file/vex3/vex3.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Vex3</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/vex3')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./g_file/vex4/vex4.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Vex4</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/vex4')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./g_file/vex5/vex.jpeg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Vex5</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/Vex5')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./g_file/vex6/assets/icon.jpeg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Vex6</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/Vex5')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./g_file/vex7/assets/icon.jpeg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Vex7</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/Vex5')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/db.webp" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Drift Boss</div>
+				  <button class="gamebox__button" onclick="classic('./g_file/drift-boss')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/trex-run-3D.webp" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">3D Dino Run</div>
+				  <button class="gamebox__button" onclick="openWindow('https://lagged.com/api/play2/t-rex-3d2/')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			   <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/fruitninja.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Fruit Ninja</div>
+				  <button class="gamebox__button" onclick="openWindow('https://games.crazygames.com/en_US/fruit-ninja/index.html')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/pixel-shooter.webp" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Pixel Shooter</div>
+				  <button class="gamebox__button" onclick="openWindow('https://94bfktj403i6m18as4vkvtreqd0ohci4-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://274019683-173520394482650759.preview.editmysite.com/uploads/b/139890129-131715539788281629/files/ps.xml')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./g_file/doodle-jump/doodle.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Doodle Jump</div>
+				  <button class="gamebox__button" onclick="classic('g_file/doodle-jump')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/GAMES/googlesnake.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Google Snake</div>
+				  <button class="gamebox__button" onclick="openWindow('https://www.google.com/search?q=google+snake')">Play</button>
+				</div>
+			  </div>
+			  <!---->
+		  </div>
+		  </div>						
+	</div>
+</body>
+</html>

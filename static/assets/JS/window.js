@@ -110,7 +110,11 @@ function openWindow(url) {
   });
 
   gotoBtn.addEventListener("click", () => {
-    window.location.href = url;
+    window.location.href= iframe.src
+  });
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
 }
 
@@ -222,6 +226,10 @@ function classic(url) {
   });
 
   gotoBtn.addEventListener("click", () => {
-    window.location.href = iframe.src
+    window.location.href= iframe.src
+  });
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
 }

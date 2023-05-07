@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+            background-color: #101725;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		
+		.topbar {
+			background-color: #25365c;
+			height: 50px;
+			padding: 10px;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.logo {
+			height: 30px;
+			width: auto;
+		}
+		
+		.upload-btn {
+			background-color: #fff;
+			color: #37528c;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			margin-right: 20px;
+		}
+		
+		#ruf {
+            align-self: center;
+            align-items: center;
+            height: 90%;
+            width: 90%;
+			position: absolute;
+			top: 7.5%;
+			bottom: 0;
+			background-color: #000;
+		}
+        
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <title>Ruffle Demo</title>
+  </head>
+  <body>
+    <div class="topbar">
+		<img class="logo" src="img/rufflelogo.png" alt="Logo">
+		<button class="upload-btn" onclick="document.getElementById('fileInput').click()">Upload File</button>
+<input type="file" id="fileInput" style="display:none" onchange="handleFileSelect(this)">
+<script>
+	function handleFileSelect(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var ruf = document.getElementById("ruf");
+      ruf.setAttribute("src", e.target.result);
+      ruffle.recreate();
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+var ruffle = RufflePlayer.newest();
+
+if (ruffle) {
+  ruffle.bind(document.getElementById("ruf"));
+} else {
+  console.log("Ruffle not found.");
+}
+
+</script>
+	</div>
+    <script src="./ruffle/ruffle.js"></script>
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <embed id="ruf" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="./badpiggie3.swf" type="application/x-shockwave-flash"></embed>
+    </div>
+  </body>
+</html>

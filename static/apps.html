@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function credits() {
+			alert("UI inspired by serverside.fun all scripts made by SeismeticServices")
+		}
+	</script>
+    <script>
+		function aboutblank(url) {
+			var newWindow = window.open("", "newWindow", "width=800,height=600");
+			newWindow.document.write("<html><head><title>New Window</title></head><body><iframe src='" + url + "' frameborder='0' width='100%' height='100%'></iframe></body></html>");
+		}
+	</script>
+    <script src="window.js"></script>
+	<script src="./assets/JS/find.js"></script>
+	<script src="./assets/JS/customapp.js"></script>
+	<script src="uv/uv.bundle.js" defer></script>
+	<script src="uv/uv.config.js" defer></script>
+	<script src="index.js" defer></script>
+    <link rel="stylesheet" href="assets/css/page.css">
+    <link rel="stylesheet" href="assets/css/window.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<title>Seismetic X</title>
+</head>
+<body onload="refreshAppContainer();">
+	<div class="navbar">
+		<div class="navbar-logo">
+			<img src="./SeisV3.png" alt="Logo">
+		</div>
+		<div class="navbar-buttons">
+			<button onclick="window.location.href ='./apps.html' "><i class="fas fa-th"></i> Apps</button>
+			<button onclick="window.location.href ='./games.html' "><i class="fas fa-gamepad"></i> Games</button>
+			<button onclick="window.location.href ='./search.html' "><i class="fas fa-search"></i> Search</button>
+			<button onclick="window.location.href ='./chat.html' "><i class="fas fa-comments"></i> Chat</button>
+			<button onclick="window.location.href ='./settings.html' "><i class="fas fa-cog"></i> Settings</button>
+		</div>
+	</div>
+	<div class="c3enter">
+		<input class="searchbar" id="searchbar" name="search" onkeyup="search_item()" placeholder="Search.." tag="searchbar" type="text" autocomplete="off">
+		<button id="smallbtnspace" onclick="clearApps()">Clear Custom Apps</button>
+		<div class="gamebox-container" id="app-container">
+			<!---->
+			<div class="gamebox" id="add-app">
+				<div class="gamebox__image">
+				<img src="./assets/img/apps/plus.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				<div class="gamebox__title">Add App</div>
+				<button class="gamebox__button" onclick="addApp()">Launch</button>
+				</div>
+			</div>
+			<!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/google.svg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Google</div>
+				  <button class="gamebox__button" onclick="openWindow('https://google.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/yt.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Youtube</div>
+				  <button class="gamebox__button" onclick="openWindow('https://youtube.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/discord.jpg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Discord</div>
+				  <button class="gamebox__button" onclick="openWindow('https://discord.com/app')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/twitter.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Twitter</div>
+				  <button class="gamebox__button" onclick="openWindow('https://twitter.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/twitch.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Twitch</div>
+				  <button class="gamebox__button" onclick="openWindow('https://twitch.tv')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/coolmathgames.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">CoolMathgames</div>
+				  <button class="gamebox__button" onclick="openWindow('https://coolmathgames.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/amazon.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Amazon</div>
+				  <button class="gamebox__button" onclick="openWindow('https://amazon.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/crazy.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Crazygames</div>
+				  <button class="gamebox__button" onclick="openWindow('https://crazygames.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/espn.webp" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">ESPN</div>
+				  <button class="gamebox__button" onclick="openWindow('https://espn.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/xbox.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Xbox</div>
+				  <button class="gamebox__button" onclick="openWindow('https://xbox.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/youtubemusic.webp" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Youtube Music</div>
+				  <button class="gamebox__button" onclick="openWindow('https://music.youtube.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/GPT.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">ChatGPT</div>
+				  <button class="gamebox__button" onclick="openWindow('https://chatgptproxy.me')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/flixhq.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">FlixHQ</div>
+				  <button class="gamebox__button" onclick="openWindow('https://flixhq.to')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/flixtor.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Flixtor</div>
+				  <button class="gamebox__button" onclick="openWindow('https://flixtor.to')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/thirtydollar.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">ThirtyDollar Website</div>
+				  <button class="gamebox__button" onclick="openWindow('https://thirtydollar.website')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/geforce.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">GeForce Now</div>
+				  <button class="gamebox__button" onclick="openWindow('https://play.geforcenow.com/mall/#/layout/games')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/vscode.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">VsCode</div>
+				  <button class="gamebox__button" onclick="openWindow('https://vscode.dev')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			   <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/spotify.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Spotify</div>
+				  <button class="gamebox__button" onclick="openWindow('https://spotify.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/tiktok.webp" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">TikTok</div>
+				  <button class="gamebox__button" onclick="openWindow('https://tiktok.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/zoroto.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">zoro.to</div>
+				  <button class="gamebox__button" onclick="openWindow('https://zoro.to')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/mspaint.jpg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">MSpaint</div>
+				  <button class="gamebox__button" onclick="openWindow('https://jspaint.app/')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/rumble.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Rumble</div>
+				  <button class="gamebox__button" onclick="openWindow('https://rumble.com/')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/soundcloud.jpg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Soundcloud</div>
+				  <button class="gamebox__button" onclick="openWindow('https://soundcloud.com/')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/telegram.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Telegram</div>
+				  <button class="gamebox__button" onclick="openWindow('https://web.telegram.org/')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/paramount.png" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Paramount</div>
+				  <button class="gamebox__button" onclick="openWindow('https://paramountplus.com')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/hbo.webp" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">HBO Max</div>
+				  <button class="gamebox__button" onclick="openWindow('https://www.hbomax.com/')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+			  <!---->
+			<div class="gamebox">
+				<div class="gamebox__image">
+				  <img src="./assets/img/apps/pokigames.jpg" alt="GameImage">
+				</div>
+				<div class="gamebox__content">
+				  <div class="gamebox__title">Poki</div>
+				  <button class="gamebox__button" onclick="openWindow('https://poki.com/')">Launch</button>
+				</div>
+			  </div>
+			  <!---->
+		  </div>
+		  </div>						
+	</div>
+</body>
+</html>

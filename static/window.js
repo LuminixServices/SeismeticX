@@ -110,7 +110,7 @@ function openWindow(url) {
     });
   
     gotoBtn.addEventListener("click", () => {
-      window.location.href = url;
+      window.location.href= iframe.src
     });
   }
   
@@ -222,7 +222,7 @@ function openWindow(url) {
     });
   
     gotoBtn.addEventListener("click", () => {
-      window.location.href = url;
+      window.location.href= iframe.src
     });
   }
   

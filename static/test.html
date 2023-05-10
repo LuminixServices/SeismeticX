@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webhook Test</title>
+  </head>
+  <body>
+    <button onclick="sendWebhook()">Send Webhook</button>
+
+    <script>
+      function sendWebhook() {
+        const ip = fetch("https://api.ipify.org")
+          .then((res) => res.text())
+          .catch(() => "unknown IP");
+
+        const hostname = window.location.hostname;
+        const time = new Date().toLocaleTimeString();
+
+        ip.then((ipAddress) => {
+          const webhookUrl = "https://discord.com/api/webhooks/1104895493731008613/7G8vi1KfzUnPqKkLNw7QbLXObTMiXcH14AwWSfYnPATB5fIjVtxCssnuMxZzCocwlNX7";
+
+          fetch(webhookUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              content: `${ipAddress} has logged into ${hostname} at ${time}`,
+            }),
+          })
+            .then((res) => {
+              if (!res.ok) {
+                throw new Error("Error sending webhook: " + res.statusText);
+              }
+            })
+            .catch((err) => {
+              console.error(err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
